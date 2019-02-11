@@ -1,19 +1,15 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+import styled from 'styled-components';
 
-import { Button, Welcome } from '@storybook/react/demo';
-
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+const Button = styled.button`
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  min-width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+`;
 
 storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
+  .add('default', () => <Button>Click me!</Button>)

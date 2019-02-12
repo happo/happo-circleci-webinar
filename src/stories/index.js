@@ -9,6 +9,7 @@ const Button = styled.button`
   min-width: 150px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  background-color: #fff;
 `;
 
 storiesOf('Button', module)
